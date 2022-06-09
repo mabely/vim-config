@@ -59,7 +59,6 @@ Plug 'wellle/targets.vim'                                     " Add lots of extr
 Plug 'dhruvasagar/vim-table-mode'                             " Add some pretty powerful tools for creating ASCII tables
 
 " Autocomplete
-Plug 'jiangmiao/auto-pairs'                                   " Auto add paired characters (and try not to be too annoying about it)
 Plug 'noahfrederick/vim-skeleton'                             " Use a template file when creating new files
 if has('nvim')
   Plug 'ncm2/ncm2'                                              " Add auto-complete
@@ -85,8 +84,9 @@ Plug 'honza/vim-snippets'                                     " Add many popular
 if has('nvim')
   Plug 'w0rp/ale'                                               " Syntax highlight & lint multiple languages as you type
   Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' } " Add LanguageServer support for enhanced autocompletion
-else
-  Plug 'scrooloose/syntastic'                                   " The Godfather of all syntax highlighting and checking
+" Commented out because it complains about missing php doc comments
+" else
+"   Plug 'scrooloose/syntastic'                                   " The Godfather of all syntax highlighting and checking
 endif
 Plug 'sheerun/vim-polyglot'                                   " Currated group of other excellent plugins
 Plug 'niquola/vim-hl7',                {'for': 'hl7'}         " HL7 syntax highlighting
@@ -172,7 +172,7 @@ set smarttab
 set spelllang=en_gb
 set statusline=%<%f\ %h%m%r%=%-20.(line=%l\ of\ %L,col=%c%V%)\%h%m%r%=%-40(,%n%Y%)\%P%#warningmsg#%{SyntasticStatuslineFlag()}%*
 set t_Co=256                            " Set 256 colour mode
-set tabstop=4                           " Make a tab = 2 spaces
+set tabstop=4                           " Make a tab = 4 spaces
 set timeoutlen=500                      " Milliseconds to wait for another key press when evaluating commands
 set wildmode=list:longest               " Shell-like behaviour for command autocompletion
 
@@ -303,14 +303,14 @@ nmap <silent> <unique> ,. :BufExplorer<CR>
 map <silent> <Leader><Leader> :b#<CR>
 
 " <leader>a<?> to align visually selected lines on <something>
-vnoremap <silent> <Leader>a= :Tabularize /=<CR>
-vnoremap <silent> <Leader>a=> :Tabularize /=>/l1c1r1<CR>
-vnoremap <silent> <Leader>a, :Tabularize /,\@<=/l0r1<CR>
-vnoremap <silent> <Leader>a{ :Tabularize /{<CR>
-vnoremap <silent> <Leader>at :Tabularize /\|<CR>
-vnoremap <silent> <Leader>a\| :Tabularize /\|<CR>
-vnoremap <silent> <Leader>a: :Tabularize /\w:\zs/l0l1<CR>
-vnoremap <silent> <Leader>a<space> :Tabularize /[^ ] \+\zs/l0r1<CR>
+" vnoremap <silent> <Leader>a= :Tabularize /=<CR>
+" vnoremap <silent> <Leader>a=> :Tabularize /=>/l1c1r1<CR>
+" vnoremap <silent> <Leader>a, :Tabularize /,\@<=/l0r1<CR>
+" vnoremap <silent> <Leader>a{ :Tabularize /{<CR>
+" vnoremap <silent> <Leader>at :Tabularize /\|<CR>
+" vnoremap <silent> <Leader>a\| :Tabularize /\|<CR>
+" vnoremap <silent> <Leader>a: :Tabularize /\w:\zs/l0l1<CR>
+" vnoremap <silent> <Leader>a<space> :Tabularize /[^ ] \+\zs/l0r1<CR>
 
 " Start interactive EasyAlign in visual mode (e.g. vipa)
 vmap aa <Plug>(LiveEasyAlign)
