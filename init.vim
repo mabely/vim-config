@@ -116,7 +116,7 @@ call plug#end()
 
 syntax on
 filetype on
-filetype indent on
+filetype indent off
 filetype plugin on
 
 
@@ -139,7 +139,7 @@ if has('nvim')
   set termguicolors                     " Use nicer colours in nvim
 endif
 
-set autoindent                          " Automatically indent based on syntax detection
+" set autoindent                          " Automatically indent based on syntax detection
 set autowrite                           " Writes on make/shell commands
 set background=dark
 set backspace=start,indent,eol
