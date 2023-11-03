@@ -1,3 +1,4 @@
+scriptencoding utf-8
 set nocompatible
 
 if has('nvim')
@@ -155,7 +156,10 @@ set formatoptions+=j
 set hidden                              " Allow buffer switching without saving
 set history=1000                        " Remember a decent way back
 set laststatus=2                        " Always show status line.
-set listchars=nbsp:█,eol:¶,tab:>-,extends:»,precedes:«,trail:•
+" Some potential settings with symbols to represent chars. Too much though
+hi SpecialKey ctermfg=grey guifg=grey70
+set listchars=tab:\|\  "
+set list
 set mousehide                           " Hide the mouse cursor when typing
 set nofoldenable                        " Disable all folding of content
 set nojoinspaces                        " Use only 1 space after "." when joining lines instead of 2
