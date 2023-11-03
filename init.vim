@@ -157,7 +157,7 @@ set hidden                              " Allow buffer switching without saving
 set history=1000                        " Remember a decent way back
 set laststatus=2                        " Always show status line.
 " Some potential settings with symbols to represent chars. Too much though
-hi SpecialKey ctermfg=grey guifg=grey70
+hi SpecialKey ctermfg=darkgray guifg=#3C414C ctermbg=NONE guibg=NONE
 set listchars=tab:\|\  "
 set list
 set mousehide                           " Hide the mouse cursor when typing
