@@ -174,7 +174,6 @@ set showbreak=↪                         " Show nicer symbol when a line is bei
 set signcolumn=yes                      " Show signcolumn all the time to avoid it popping in when gitgutter wakes up
 set smarttab
 set spelllang=en_gb
-set statusline=%<%f\ %h%m%r%=%-20.(line=%l\ of\ %L,col=%c%V%)\%h%m%r%=%-40(,%n%Y%)\%P%#warningmsg#%{SyntasticStatuslineFlag()}%*
 set t_Co=256                            " Set 256 colour mode
 set tabstop=4                           " Make a tab = 4 spaces
 set timeoutlen=500                      " Milliseconds to wait for another key press when evaluating commands
@@ -299,9 +298,8 @@ nnoremap Y y$
 " Add jk as an escape sequence
 imap jk <esc>
 
-" <leader>. to view all document buffers
-nmap <silent> <unique> <Leader>. :BufExplorer<CR>
-nmap <silent> <unique> ,. :BufExplorer<CR>
+" ,. to view all document buffers - removed unique
+nmap <silent> ,. :BufExplorer<CR>
 
 " Double leader to switch to the previous buffer
 map <silent> <Leader><Leader> :b#<CR>
